@@ -23,11 +23,14 @@ const SHOES = () => {
     <div className="max-w-6xl mx-auto px-4 py-8">
       {product.map((product) => (
         <div key={product._id}>
-          {product.productName}
+          {product.name}
           {product.image && (
             <Image
               src={ urlFor(product.image).url()}
-              alt="image"/>
+              alt="image"
+              width = {200}
+              height = {200}
+              />
           )
 
          } 
