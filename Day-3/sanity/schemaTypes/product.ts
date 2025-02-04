@@ -8,6 +8,17 @@ export const productSchema = {
         title: 'Product Name',
         type: 'string',
       },
+
+      {
+        name: 'slug',
+        title: 'Slug',
+        type: 'slug',
+        options: {
+          source: 'name',
+          maxLength: 96,
+        },
+      },
+      
       {
         name: 'category',
         title: 'Category',
