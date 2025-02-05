@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Remove horizontal scroll for the entire website */
+html, body {
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    margin: 0; /* Remove default margins */
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%; /* Ensure body takes full width */
+  }
+  
+  * {
+    box-sizing: border-box; /* Ensure padding/margins don't cause overflows */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Ensure containers don't overflow */
+  .container, .main, .content {
+    max-width: 100%; 
+    overflow-x: hidden;
+  }
+  

@@ -1,0 +1,109 @@
+/* Main Container */
+.snav-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  z-index: 100; /* Ensures it sits below the FNAV */
+}
+
+/* Nike Logo */
+.nike-img img {
+  cursor: pointer;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: gray;
+}
+
+/* Search Bar & Icons */
+.search {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search input {
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 5px 10px;
+  outline: none;
+  font-size: 12px;
+}
+
+.search svg {
+  cursor: pointer;
+}
+
+/* Hamburger Menu for Mobile */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  border-radius: 2px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    z-index: 2; /* Ensures menu button is clickable */
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust so it doesn’t overlap FNAV */
+    right: 0;
+    background-color: white;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .search input {
+    width: 100px; /* Adjust input size for mobile */
+  }
+
+  .snav-main {
+    position: relative;
+    margin-top: 25px; /* Adds space below FNAV */
+  }
+}
+
+/* Ensure FNAV stays on top */
+.frstnav {
+  position: relative;
+  z-index: 10;
+}

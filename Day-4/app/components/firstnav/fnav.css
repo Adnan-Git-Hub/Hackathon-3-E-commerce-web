@@ -1,0 +1,70 @@
+/* Container for the fnav */
+.frstnav {
+    display: flex;
+    justify-content: space-between; /* Logo on left, links on right */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f5f5f5; /* Light gray background */
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure it stays on top */
+    font-size: 12px; /* Small text size */
+    color: #333; /* Dark gray text color */
+  }
+  
+  /* Logo Styling */
+  .ft img {
+    width: 24px; /* Adjust logo size */
+    height: auto;
+  }
+  
+  /* Navigation Links */
+  .frstnav ul {
+    display: flex;
+    gap: 15px; /* Minimal spacing between links */
+    list-style: none; /* Remove bullets */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .frstnav ul li {
+    display: inline-block;
+    color: #333; /* Dark gray text */
+  }
+  
+  .frstnav ul li a {
+    text-decoration: none;
+    color: #333; /* Link color */
+  }
+  
+  .frstnav ul li a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  /* Mobile Adjustments */
+  @media (max-width: 768px) {
+    .frstnav {
+      flex-direction: column; /* Stack logo and links */
+      align-items: flex-start;
+      padding: 10px;
+    }
+  
+    .frstnav ul {
+      flex-direction: row; /* Links in a row */
+      gap: 10px;
+      justify-content: flex-end; /* Align links to the right */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .frstnav {
+      padding: 5px 10px; /* Compact padding for small screens */
+    }
+  
+    .frstnav ul {
+      gap: 8px; /* Adjust spacing */
+    }
+  }
+  
